@@ -11,6 +11,9 @@
 #include <string_view>
 
 // project headers
+#include "character/character_race.hpp"
+#include "character/character_util.hpp"
+#include "character/character_base.hpp"
 #include "items/item_type.hpp"
 #include "items/item_base.hpp"
 #include "items/weapons/item_weapon_test.hpp"
