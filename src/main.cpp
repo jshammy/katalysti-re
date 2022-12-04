@@ -2,7 +2,7 @@
 
 int main( void )
 {
-    const auto char_race = katalysti::character::CharacterRace::ORC;
+    const auto char_race = katalysti::character::CharacterRace::ELF;
     const auto char_test = std::make_unique<katalysti::character::CCharacterBase>(
         katalysti::character::GenerateRandomName(char_race), 
         char_race, 

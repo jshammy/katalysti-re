@@ -142,5 +142,97 @@ namespace katalysti
             "Shadowsteel",
             "Boldshift"
         };
+        constexpr std::array<const char*, 20> ELF_FIRST_NAME
+        {
+            "Halueth",
+            "Aithlin",
+            "Nyvorlas",
+            "Leladros",
+            "Alora",
+            "Kynya",
+            "Manaeth",
+            "Iralin",
+            "Alydos",
+            "Cerelneth",
+            "Myladea",
+            "Aethala",
+            "Thedyia",
+            "Zalla",
+            "Elynna",
+            "Amanne",
+            "Kealda",
+            "Tynthel",
+            "Ellean",
+            "Annara"
+        };
+        constexpr std::array<const char*, 20> ELF_LAST_NAME
+        {
+            "Magesun",
+            "Windcloud",
+            "Stagdancer",
+            "Shadowbloom",
+            "Sunsong",
+            "Bluewing",
+            "Ravenfeather",
+            "Trueflower",
+            "Truearrow",
+            "Summerhelm",
+            "Shadowwing",
+            "Stardew",
+            "Wildsnow",
+            "Voidbloom",
+            "Dawnshade",
+            "Stormsky",
+            "Stonewhisper",
+            "Lunastalker",
+            "Mistbloom",
+            "Sageweaver"
+        };
+        constexpr std::array<const char*, 20> HUMAN_FIRST_NAME
+        {
+            "Rocky",
+            "Julien",
+            "Rober",
+            "Fontaine",
+            "Lucan",
+            "Caiden",
+            "Willem",
+            "Hunter",
+            "Keno",
+            "Baldwin",
+            "Evelyn",
+            "Maree",
+            "Joelle",
+            "Halie",
+            "Abigail",
+            "Jenette",
+            "Anna",
+            "Tara",
+            "Marcellia",
+            "Jasmyn"
+        };
+        constexpr std::array<const char*, 20> HUMAN_LAST_NAME
+        {
+            "Whiteley",
+            "Oakley",
+            "Stanford",
+            "Townsend",
+            "Barlow",
+            "Myerscough",
+            "Alden",
+            "Dudley",
+            "Reeve",
+            "Ashton",
+            "Kendall",
+            "Snowdon",
+            "Atherton",
+            "Torp",
+            "Altham",
+            "Norton",
+            "Mildenhall",
+            "Clifford",
+            "Rutland",
+            "Nash"
+        };
     }
 }

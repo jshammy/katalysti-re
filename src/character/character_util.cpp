@@ -21,7 +21,13 @@ namespace katalysti
                     last_names  = DWARF_LAST_NAME;
                     break;
                 case CharacterRace::ELF:
+                    first_names = ELF_FIRST_NAME;
+                    last_names  = ELF_LAST_NAME;
+                    break;
                 case CharacterRace::HUMAN:
+                    first_names = HUMAN_FIRST_NAME;
+                    last_names  = HUMAN_LAST_NAME;
+                    break;
                 case CharacterRace::ORC:
                     first_names = ORC_FIRST_NAME;
                     last_names  = ORC_LAST_NAME;
