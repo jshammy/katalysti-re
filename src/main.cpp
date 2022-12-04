@@ -3,11 +3,13 @@
 int main( void )
 {
     const auto char_race = katalysti::character::CharacterRace::ELF;
-    const auto char_test = std::make_unique<katalysti::character::CCharacterBase>(
-        katalysti::character::GenerateRandomName(char_race), 
-        char_race, 
-        katalysti::character::CharacterTeam::PLAYER,
-        19);
+    //const auto char_test = std::make_unique<katalysti::character::CCharacterBase>(
+    //    katalysti::character::GenerateRandomName(char_race), 
+    //    char_race, 
+    //    katalysti::character::CharacterTeam::PLAYER,
+    //    19);
+
+    const auto char_test = katalysti::character::GenerateRandomCharacter(false);
 
     std::cout << "name: " << char_test->GetCharacterName() << '\n';
     std::cout << "race: " << katalysti::character::RaceAsString( char_test->GetCharacterRace() ) << '\n';

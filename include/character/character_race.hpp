@@ -12,6 +12,7 @@ namespace katalysti
             ORC,
             TROLL,
             UNDEAD,
+            NUM_RACES
         };
     }
 }

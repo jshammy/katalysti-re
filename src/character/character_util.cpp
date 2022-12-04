@@ -4,10 +4,23 @@ namespace katalysti
 {
     namespace character
     {        
-        std::unique_ptr<CCharacterBase> GenerateRandomCharacter()
+        std::unique_ptr<CCharacterBase> GenerateRandomCharacter( const bool &recruitable )
         {
-            auto new_character = std::make_unique<CCharacterBase>("asdf", CharacterRace::DWARF, CharacterTeam::RECRUITABLE, 16);
-            return new_character;
+            const auto num_races = static_cast<int>( CharacterRace::NUM_RACES );
+            const auto char_team = (recruitable == true) ? CharacterTeam::RECRUITABLE : CharacterTeam::OPPONENT;
+
+            std::random_device rand_dev;
+            std::mt19937 rand_engine(rand_dev());
+            std::uniform_int_distribution<int> val(0, num_races - 1);
+
+            const auto rand_race = static_cast<CharacterRace>( val( rand_engine ) );
+            const auto rand_name = GenerateRandomName( rand_race );
+
+            val = std::uniform_int_distribution<int>(16, 50);
+
+            const auto rand_age = val( rand_engine );
+
+            return std::make_unique<CCharacterBase>( rand_name, rand_race, char_team, rand_age );
         }
 
         std::string GenerateRandomName( const CharacterRace &race )

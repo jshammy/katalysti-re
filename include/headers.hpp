@@ -18,8 +18,9 @@
 #include "character/character_race.hpp"
 #include "character/character_team.hpp"
 #include "character/character_names.hpp"
-#include "character/character_util.hpp"
 #include "character/character_base.hpp"
+#include "character/character_util.hpp"
+
 #include "items/item_type.hpp"
 #include "items/item_base.hpp"
 #include "items/weapons/item_weapon_test.hpp"
