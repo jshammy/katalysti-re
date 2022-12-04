@@ -96,5 +96,51 @@ namespace katalysti
             "Lightspell",
             "Townend"
         };
+        constexpr std::array<const char*, 20> ORC_FIRST_NAME
+        {
+            "Sorgarm",
+            "Herzirgoth",
+            "Solzus",
+            "Zur",
+            "Merl",
+            "Thugnothek",
+            "Gravtosh",
+            "Kottoz",
+            "Krondutel",
+            "Asdu",
+            "So'tini",
+            "Shodremu",
+            "Gimava",
+            "Ankahnir",
+            "Gigvetga",
+            "Ary",
+            "Shulizit",
+            "Sahmi",
+            "Gertit",
+            "Mogo"
+        };
+        constexpr std::array<const char*, 20> ORC_LAST_NAME
+        {
+            "Broadaxe",
+            "Vengepack",
+            "Stormlaugh",
+            "Wrathtwist",
+            "Lonesnarl",
+            "Warrunner",
+            "Frostbone",
+            "Stronghorn",
+            "Deepscream",
+            "Blacksorrow",
+            "Warwind",
+            "Keencrusher",
+            "Blackfury",
+            "Burningmaul",
+            "Grimblood",
+            "Stoutfist",
+            "Coldhunt",
+            "Strongslayer",
+            "Shadowsteel",
+            "Boldshift"
+        };
     }
 }

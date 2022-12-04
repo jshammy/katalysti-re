@@ -23,6 +23,9 @@ namespace katalysti
                 case CharacterRace::ELF:
                 case CharacterRace::HUMAN:
                 case CharacterRace::ORC:
+                    first_names = ORC_FIRST_NAME;
+                    last_names  = ORC_LAST_NAME;
+                    break;
                 case CharacterRace::TROLL:
                 case CharacterRace::UNDEAD:
                     first_names = UNDEAD_FIRST_NAME;

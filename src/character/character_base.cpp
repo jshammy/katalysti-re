@@ -6,13 +6,13 @@ namespace katalysti
     {
         CCharacterBase::CCharacterBase( std::string_view character_name, const CharacterRace &character_race, const CharacterTeam &character_team, const uint16_t &character_age )
         {
-            // base values
+            // why not std::map tho?
             this->attributes = {
-                CharacterAttribs_t( CharacterAttribute::DEXTERITY, 20 ),
-                CharacterAttribs_t( CharacterAttribute::INTELLIGENCE, 20 ),
-                CharacterAttribs_t( CharacterAttribute::STAMINA, 20 ),
-                CharacterAttribs_t( CharacterAttribute::STRENGTH, 20 ),
-                CharacterAttribs_t( CharacterAttribute::WISDOM, 20 )
+                CharacterAttribs_t( CharacterAttribute::DEXTERITY, 0 ),
+                CharacterAttribs_t( CharacterAttribute::INTELLIGENCE, 0 ),
+                CharacterAttribs_t( CharacterAttribute::STAMINA, 0 ),
+                CharacterAttribs_t( CharacterAttribute::STRENGTH, 0 ),
+                CharacterAttribs_t( CharacterAttribute::WISDOM, 0 )
             };
 
             this->age  = character_age;
