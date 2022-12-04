@@ -7,7 +7,7 @@ int main( void )
         "Sample Character", 
         katalysti::character::CharacterRace::UNDEAD, 
         katalysti::character::CharacterTeam::PLAYER,
-        32);
+        19);
 
     item_test->Tick();
     std::cout << item_test->GetItemName() << '\n';

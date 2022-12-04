@@ -4,6 +4,9 @@ namespace katalysti
 {
     namespace character
     {
+       constexpr auto AGE_MIN = 16;
+       constexpr auto AGE_MAX = 50;
+       
        class CCharacterBase
        {
           public:

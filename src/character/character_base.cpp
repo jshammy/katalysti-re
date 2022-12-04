@@ -20,8 +20,8 @@ namespace katalysti
             this->race = character_race;
             this->team = character_team;
 
-            SetAgeModifiers();
             SetRacialModifiers();
+            SetAgeModifiers();
         }
 
         uint16_t CCharacterBase::GetAttributePoints( const CharacterAttribute &a  ) const
@@ -30,8 +30,6 @@ namespace katalysti
 
             if( attribute_index < 0 || attribute_index > static_cast<std::size_t>(CharacterAttribute::NUM_ATTRIBUTES) )
                 return static_cast<uint16_t>(0);
-
-            std::cout << "index: " << attribute_index << '\n';
 
             const auto attribute = this->attributes[attribute_index].second;
             
@@ -65,14 +63,14 @@ namespace katalysti
 
             for( auto &attribute : attributes )
             {
-                const auto delta_value = base_value - character_age;
-                if( character_age < base_value )
-                    attribute.second = (delta_value-delta_value) + 2;
-                else
-                    attribute.second = (delta_value+delta_value) + 2;
+                if( character_age == AGE_MIN )
+                    break;
+               
+                for( auto i = AGE_MIN; i < character_age; i++ )
+                    attribute.second += 2;
             }
         }
-       
+
         void CCharacterBase::SetRacialModifiers( void )
         {
             const auto character_race = this->race;

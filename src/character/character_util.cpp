@@ -3,10 +3,7 @@
 namespace katalysti
 {
     namespace character
-    {
-        constexpr auto AGE_MIN = 16;
-        constexpr auto AGE_MAX = 50;
-        
+    {        
         std::unique_ptr<CCharacterBase> GenerateRandomCharacter()
         {
             auto new_character = std::make_unique<CCharacterBase>("asdf", CharacterRace::DWARF, CharacterTeam::RECRUITABLE, 16);
@@ -39,12 +36,11 @@ namespace katalysti
             
             std::random_device rand_dev;
             std::mt19937 rand_engine(rand_dev());
-            std::uniform_int_distribution<int> val(1,last_names.size() - 1);
+            std::uniform_int_distribution<int> val(0,last_names.size() - 1);
 
             const auto random_index0 = val( rand_engine );
             const auto random_index1 = val( rand_engine );
 
-            std::cout << "f: " << random_index0 << " l: " << random_index1 << '\n';
             std::string random_first = first_names[random_index0];
             std::string random_last  = last_names[random_index1];
 
