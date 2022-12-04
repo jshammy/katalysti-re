@@ -4,9 +4,72 @@ namespace katalysti
 {
     namespace character
     {
-        CharacterRace ICharacterBase::GetCharacterRace( void ) const
+        CCharacterBase::CCharacterBase( std::string_view character_name, const CharacterRace &character_race, const CharacterTeam &character_team, const uint16_t &character_age )
+        {
+            // base values
+            this->attributes = {
+                CharacterAttribs_t( CharacterAttribute::DEXTERITY, 20 ),
+                CharacterAttribs_t( CharacterAttribute::INTELLIGENCE, 20 ),
+                CharacterAttribs_t( CharacterAttribute::STAMINA, 20 ),
+                CharacterAttribs_t( CharacterAttribute::STRENGTH, 20 ),
+                CharacterAttribs_t( CharacterAttribute::WISDOM, 20 )
+            };
+
+            SetRacialModifiers();
+
+            this->age  = character_age;
+            this->name = character_name;
+            this->race = character_race;
+            this->team = character_team;
+        }
+
+        uint16_t CCharacterBase::GetAttributePoints( const CharacterAttribute &a  ) const
+        {
+            auto attribute_index = static_cast<std::size_t>(a);
+
+            if( attribute_index < 0 || attribute_index > static_cast<std::size_t>(CharacterAttribute::NUM_ATTRIBUTES) )
+                return NULL;
+
+            const auto attribute = this->attributes[attribute_index].second;
+            
+            return attribute;
+        }
+
+        uint16_t CCharacterBase::GetCharacterAge( void ) const
+        {
+            return this->age;
+        }
+
+        std::string_view CCharacterBase::GetCharacterName( void ) const
+        {
+            return this->name;
+        }
+
+        CharacterRace CCharacterBase::GetCharacterRace( void ) const
         {
             return this->race;
+        }
+
+        CharacterTeam CCharacterBase::GetCharacterTeam( void ) const
+        {
+            return this->team;
+        }
+       
+        void CCharacterBase::SetRacialModifiers( void )
+        {
+            const auto character_race = this->race;
+            
+            switch( character_race )  // TODO
+            {
+                case CharacterRace::DWARF:
+                case CharacterRace::ELF:
+                case CharacterRace::HUMAN:
+                case CharacterRace::ORC:
+                case CharacterRace::TROLL:
+                case CharacterRace::UNDEAD:
+                default:
+                    break;
+            }
         }
     }
 }
