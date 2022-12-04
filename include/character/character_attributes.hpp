@@ -4,8 +4,8 @@ namespace katalysti
 {
     namespace character
     {
-        constexpr auto AGE_INCREMENT = 2;
-        
+        constexpr auto AGE_INCREMENT = 1;
+
         enum class CharacterAttribute : unsigned
         {
             DEXTERITY,

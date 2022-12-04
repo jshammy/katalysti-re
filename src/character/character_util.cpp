@@ -16,7 +16,7 @@ namespace katalysti
             const auto rand_race = static_cast<CharacterRace>( val( rand_engine ) );
             const auto rand_name = GenerateRandomName( rand_race );
 
-            val = std::uniform_int_distribution<int>(16, 50);
+            val = std::uniform_int_distribution<int>(AGE_MIN, AGE_MAX);
 
             const auto rand_age = val( rand_engine );
 
@@ -46,6 +46,9 @@ namespace katalysti
                     last_names  = ORC_LAST_NAME;
                     break;
                 case CharacterRace::TROLL:
+                    first_names = TROLL_FIRST_NAME;
+                    std::fill(last_names.begin(), last_names.end(), ""); // Trolls have no last name.
+                    break;
                 case CharacterRace::UNDEAD:
                     first_names = UNDEAD_FIRST_NAME;
                     last_names  = UNDEAD_LAST_NAME;

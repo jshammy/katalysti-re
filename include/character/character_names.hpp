@@ -234,5 +234,28 @@ namespace katalysti
             "Rutland",
             "Nash"
         };
+        constexpr std::array<const char*, 20> TROLL_FIRST_NAME
+        {
+            "Vu'do",
+            "Jaz'saesu",
+            "Rairmain",
+            "Tzanyon",
+            "Xaen'do",
+            "Lag'cho",
+            "Sug'say",
+            "Tzug'cha",
+            "Ez'sosh",
+            "Aengar",
+            "Si'lu",
+            "Juh'ru",
+            "Dah'aes",
+            "Chur'ol",
+            "Caw'ee",
+            "Olov'rak",
+            "Cuv'ha",
+            "Cin'yel",
+            "Bimu",
+            "Kijozu"
+        };
     }
 }
