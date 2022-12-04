@@ -15,4 +15,6 @@ int main( void )
     std::cout << "name: " << char_test->GetCharacterName() << '\n';
     std::cout << "int: " << char_test->GetAttributePoints( katalysti::character::CharacterAttribute::INTELLIGENCE ) << '\n';
     std::cout << "age: " << char_test->GetCharacterAge() << '\n';
+
+    std::cout << katalysti::character::GenerateRandomName(char_test->GetCharacterRace()) << '\n';
 }

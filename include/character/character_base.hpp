@@ -16,6 +16,7 @@ namespace katalysti
             CharacterRace GetCharacterRace( void ) const;
             CharacterTeam GetCharacterTeam( void ) const;
           protected:
+            void SetAgeModifiers( void );
             void SetRacialModifiers( void );
           protected:
             uint16_t age;
