@@ -18,6 +18,7 @@ namespace katalysti
             std::string_view GetCharacterName( void ) const;
             CharacterRace GetCharacterRace( void ) const;
             CharacterTeam GetCharacterTeam( void ) const;
+            void SetAttributePoint( const CharacterAttribute &a, const int &value );
           protected:
             void SetAgeModifiers( void );
             void SetRacialModifiers( void );

@@ -10,7 +10,7 @@ namespace katalysti
             return new_character;
         }
 
-        std::string_view GenerateRandomName( const CharacterRace &race )
+        std::string GenerateRandomName( const CharacterRace &race )
         {
             std::array<const char*, 20> first_names, last_names;
 
@@ -38,13 +38,13 @@ namespace katalysti
             std::mt19937 rand_engine(rand_dev());
             std::uniform_int_distribution<int> val(0,last_names.size() - 1);
 
-            const auto random_index0 = val( rand_engine );
-            const auto random_index1 = val( rand_engine );
+            const auto rand_index0 = val( rand_engine );
+            const auto rand_index1 = val( rand_engine );
 
-            std::string random_first = first_names[random_index0];
-            std::string random_last  = last_names[random_index1];
+            std::string rand_first = first_names[rand_index0];
+            std::string rand_last  = last_names[rand_index1];
 
-            return std::string_view( random_first + " " + random_last );
+            return std::string( rand_first + " " + rand_last );
         }
 
         std::string_view RaceAsString( const CharacterRace &race )
